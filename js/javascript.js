@@ -1,10 +1,12 @@
+///signup////
+
 var email = document.getElementById("email");
 var phone = document.getElementById("phone");
 var firstname = document.getElementById("firstname");
 var secondname = document.getElementById("secondname");
 var pwd1 = document.getElementById("pwd1"); 
 var pwd2 = document.getElementById("pwd2")
-var emailvalid = /^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9\-]+).([a-z]{2,3})(.[a-z]{2,3})?$/;
+var emailvalid = /^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9\-]+)\.([a-z]{2,3})(.[a-z])?$/;
 ////regexpression for phone numbers which accept XXXXXXXXXX, XXX-XXX-XXXX, XXX.XXX.XXXX, XXX XXX XXXX//////
 var phonenum1 = /^\d{10}$/;
 var phonenum2 = /^([0-9]{3})[-]([0-9]{3})[-]([0-9]{4})$/;
@@ -154,6 +156,10 @@ function validate(event)
       bar.style.width = "100%";
       bar.innerHTML ="Strong Password";
       bar.setAttribute("class", "bg-success progress-bar-striped progress-bar progress-bar-animated");
+      if((pwd1.value)==(pwd2.value))
+      {
+        reseterr("pwd2err","pwd2");
+      }
       return true; 
     }
   }
@@ -182,18 +188,7 @@ function validate(event)
   
 
 
-/////////Clear errors when form resubmit//////////
-  // function reseterr()
-  // {
-  //   var p = document.getElementsByTagName("p");
-  //   var f = document.getElementsByTagName("input");
-  //   for(i=0; i<=5;i++){
-  //     p[i].setAttribute("hidden", "true");
-  //     f[i].style.borderColor="#ced4da";
-  //   }
-  // }
-
-
+///Reset form error messages////
   function reseterr(ID1, ID2)
   { 
     id1 = ID1;
@@ -202,3 +197,5 @@ function validate(event)
     document.getElementById(id2).style.borderColor="#ced4da";
     
   }
+
+  //////end of signup/////

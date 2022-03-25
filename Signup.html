@@ -59,10 +59,17 @@
               <h5 class="card-title text-light text-center pt-5">Signup</h5>
             </div>
             <div class="card-body" style="z-index:90">
+
               <!---Form starts-->
-              <form action="success.html" id="Myform" method="post">
-                <p class="error" id="frstnmerr" hidden="true"></p>
-                <p class="error" id="sndnmerr" hidden="true" style="text-align: right;"></p>
+              <form action="success.html" id="Myform">
+                <div class="row">
+                  <div class="col">
+                    <p class="error" id="frstnmerr" hidden="true"></p>
+                  </div>
+                  <div class="col">
+                    <p class="error" id="sndnmerr" hidden="true" style="text-align: right;"></p>
+                  </div>
+              </div>
                 <div class="row">
                 <div class="form-group pb-4 col-7">
                     <input placeholder="First name" class="form-control"  name="first name" type="text" id="firstname">
@@ -92,7 +99,7 @@
                 <div  id="custombar" role="progressbar"  aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
               <div style="font-size: 13px;font-weight: 600;display: none;" id="pwdguide">
-              <p>Password Guidelines 
+              <p>Password Requirements:
                 <ul>
                <li> Password must contain 8 characters</li>
                <li> Password must atleast 1 uppercase letter</li>
@@ -104,7 +111,7 @@
               <div class="pb-3"><a class="text-decoration-none link-dark custom-a" href="Login.html">Already have an account?</a></div>
                 <div class="form-label-group mb-3 text-center">
                 <button type="submit" class="btn rounded-pill btn-lg btn-block btn-accent mybtn mb-2 w-50">
-                    Login
+                    Sign up
                 </button>
               </div>
                 

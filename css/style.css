@@ -170,7 +170,11 @@ background: linear-gradient(90deg, #111211f7 0%, #41b443f2 100%);
   color: #9bd7d4!important;    
 }
 .custom-a:hover{
-color: #4add3c!important;    
+color: #5ce944!important;    
+}
+.custom-a
+{
+    color: #136712 !important;
 }
 
 
@@ -215,5 +219,6 @@ text-decoration: none!important;
  .error{
   color: red;
   font-size: 13px;
-  margin: 0;
+  margin: 4px;
+  font-weight: 600;
  }

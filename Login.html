@@ -57,13 +57,14 @@
               <h5 class="card-title text-light text-center pt-5">LOGIN</h5>
             </div>
             <div class="card-body" style="z-index:90">
-              <form method="POST" action="#" >
+              <form action="success.html" id="MyForm">
+                <p class="error" id="emailerr" hidden="true"></p>
                 <div class="form-group pb-4">
-                    <input placeholder="Email" class="form-control" required name="email" type="email">
+                    <input placeholder="Email" class="form-control"  name="email" type="email" id="email">
                 </div>
-        
+                <p class="error" id="pwderr" hidden="true"></p>
                 <div class="form-label-group mb-3">
-                    <input class="form-control" placeholder="Password" required name="password" type="password" value="">
+                    <input class="form-control" placeholder="Password"  name="password" type="password" value="" id="pwd">
                 </div>
                 <div class="form-label-group mb-3 text-center">
                 <button type="submit" class="btn rounded-pill btn-lg btn-block btn-accent mybtn mb-2 w-50">
@@ -110,6 +111,34 @@
       </div>
     </footer>
 </body>
+<script>
+document.getElementById("MyForm").addEventListener("submit",validate);
+function validate(event)
+{
+ var Email = document.getElementById("email");
+ var PWD = document.getElementById("pwd");
+  if((Email.value).trim()=="")
+  {
+    document.getElementById("emailerr").removeAttribute("hidden");
+    document.getElementById("emailerr").innerText=("Email cannot be blank");
+    document.getElementById("email").style.borderColor="red";
+    event.preventDefault();
+  }
+  else if((PWD.value).trim()=="")
+  {
+    reseterr("emailerr","email");
+    document.getElementById("pwderr").removeAttribute("hidden");
+    document.getElementById("pwderr").innerText=("password cannot be blank");
+    document.getElementById("pwd").style.borderColor="red";
+    event.preventDefault();
+  }
+  else
+  {
+    return true;
+  }
+}
+</script>
+<script src="js/javascript.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 </html>
