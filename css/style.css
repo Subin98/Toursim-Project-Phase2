@@ -222,3 +222,11 @@ text-decoration: none!important;
   margin: 4px;
   font-weight: 600;
  }
+@media (prefers-colors-scheme: dark){
+body{
+    Background: #000;
+    color:#fff;
+    }
+}
+
+@media (prefers-color-scheme:dark)
